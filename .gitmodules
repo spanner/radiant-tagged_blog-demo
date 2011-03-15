@@ -1,0 +1,6 @@
+[submodule "vendor/extensions/paperclipped"]
+	path = vendor/extensions/paperclipped
+	url = git@github.com:spanner/paperclipped.git
+[submodule "vendor/extensions/paperclipped_uploader"]
+	path = vendor/extensions/paperclipped_uploader
+	url = git@github.com:spanner/radiant-paperclipped_uploader-extension.git
