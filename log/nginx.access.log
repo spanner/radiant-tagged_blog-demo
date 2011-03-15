@@ -1,0 +1,6 @@
+127.0.0.1 - - [15/Mar/2011:17:10:25 +0000] "GET / HTTP/1.1" 500 16042 "-" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+127.0.0.1 - - [15/Mar/2011:17:10:26 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://pk.dev/" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+127.0.0.1 - - [15/Mar/2011:17:10:50 +0000] "GET / HTTP/1.1" 500 13654 "-" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+127.0.0.1 - - [15/Mar/2011:17:10:51 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://pk.dev/" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+127.0.0.1 - - [15/Mar/2011:17:11:10 +0000] "GET / HTTP/1.1" 500 13187 "-" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+127.0.0.1 - - [15/Mar/2011:17:11:11 +0000] "GET /favicon.ico HTTP/1.1" 200 0 "http://pk.dev/" "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
