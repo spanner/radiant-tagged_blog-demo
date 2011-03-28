@@ -21,7 +21,7 @@ Radiant::Initializer.run do |config|
   
   # By default, only English translations are loaded. Remove any of these from
   # the list below if you'd like to provide any of the supported languages
-	config.extensions = [ :layouts, :mailer_layouts, :taggable, :reader, :forum, :paperclipped, :all, :library ]
+	config.extensions = [ :layouts, :mailer_layouts, :taggable, :assets, :all, :library ]
   config.extensions -= [:dutch_language_pack, :french_language_pack, :german_language_pack,
                         :italian_language_pack, :japanese_language_pack, :russian_language_pack]
 
@@ -82,13 +82,13 @@ Radiant::Initializer.run do |config|
   config.gem 'paperclip'
   config.gem 'radiant-layouts-extension', :lib => false
   config.gem 'radiant-mailer_layouts-extension', :lib => false
-  config.gem 'radiant-taggable-extension', :lib => false
-  config.gem 'radiant-library-extension', :lib => false
-  config.gem 'radiant-event_calendar-extension', :lib => false
-  config.gem 'radiant-taggable_events-extension', :lib => false
-  config.gem 'radiant-event_map-extension', :lib => false
-  config.gem 'radiant-reader-extension', :lib => false
-  config.gem 'radiant-forum-extension', :lib => false
+  # config.gem 'radiant-taggable-extension', :lib => false
+  # config.gem 'radiant-library-extension', :lib => false
+  # config.gem 'radiant-event_calendar-extension', :lib => false
+  # config.gem 'radiant-taggable_events-extension', :lib => false
+  # config.gem 'radiant-event_map-extension', :lib => false
+  # config.gem 'radiant-reader-extension', :lib => false
+  # config.gem 'radiant-forum-extension', :lib => false
   # config.gem 'radiant-sideboard-extension', :lib => false
 
   config.after_initialize do

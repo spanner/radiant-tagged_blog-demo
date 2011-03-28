@@ -51,7 +51,8 @@ var Popup = {
   BorderTopLeftImage: '/images/popup_border_top_left.png',
   BorderTopRightImage: '/images/popup_border_top_right.png',
   BorderBottomLeftImage: '/images/popup_border_bottom_left.png',
-  BorderBottomRightImage: '/images/popup_border_bottom_right.png'
+  BorderBottomRightImage: '/images/popup_border_bottom_right.png',
+  Windows: []
 };
 
 Popup.borderImages = function() {
@@ -62,7 +63,7 @@ Popup.borderImages = function() {
     Popup.BorderBottomLeftImage,
     Popup.BorderBottomRightImage
   ]);
-}
+};
 
 Popup.preloadImages = function() {
   if (!Popup.imagesPreloaded) {
@@ -72,16 +73,15 @@ Popup.preloadImages = function() {
     });
     Popup.preloadedImages = true;
   }
-}
+};
 
 Popup.TriggerBehavior = Behavior.create({
   initialize: function() {
-    var matches = this.element.href.match(/\#(.+)$/);
-    if (matches) {
-      this.window = new Popup.Window($(matches[1]));
-    } else {
-     this.window = new Popup.AjaxWindow(this.element.href);
+    if (!Popup.Windows[this.element.href]) {
+      var matches = this.element.href.match(/\#(.+)$/);
+      Popup.Windows[this.element.href] = (matches ? new Popup.Window($(matches[1])) : new Popup.AjaxWindow(this.element.href));
     }
+    this.window = Popup.Windows[this.element.href];
   },
   
   onclick: function(event) {
@@ -152,7 +152,7 @@ Popup.AbstractWindow = Class.create({
   focus: function() {
     var form = this.element.down('form');
     if (form) {
-      var elements = form.getElements().reject(function(e) { return e.type == 'hidden' });
+      var elements = form.getElements().reject(function(e) { return e.type == 'hidden'; });
       var element = elements[0] || form.down('button');
       if (element) element.focus();
     }
@@ -175,8 +175,8 @@ Popup.AbstractWindow = Class.create({
   centerWindowInView: function() {
     var offsets = document.viewport.getScrollOffsets();
     this.element.setStyle({
-      left: parseInt(offsets.left + (document.viewport.getWidth() - this.element.getWidth()) / 2) + 'px',
-      top: parseInt(offsets.top + (document.viewport.getHeight() - this.element.getHeight()) / 2.2) + 'px'
+      left: parseInt(offsets.left + (document.viewport.getWidth() - this.element.getWidth()) / 2, 10) + 'px',
+      top: parseInt(offsets.top + (document.viewport.getHeight() - this.element.getHeight()) / 2.2, 10) + 'px'
     });
   }
 });
