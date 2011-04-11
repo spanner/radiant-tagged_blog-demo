@@ -267,6 +267,8 @@ ActiveRecord::Schema.define(:version => 20100810151922) do
     t.integer  "site_id"
     t.integer  "page_id"
     t.boolean  "visible"
+    t.string   "metaphone"
+    t.string   "metaphone_secondary"
   end
 
   add_index "tags", ["title"], :name => "index_tags_on_title", :unique => true
