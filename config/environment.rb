@@ -79,16 +79,15 @@ Radiant::Initializer.run do |config|
 
   config.gem 'will_paginate'
   config.gem 'compass'
-  require 'ninesixty'
   
   config.gem 'paperclip'
   config.gem 'radiant-layouts-extension', :lib => false
   config.gem 'radiant-mailer_layouts-extension', :lib => false
-  # config.gem 'radiant-taggable-extension', :lib => false
-  # config.gem 'radiant-library-extension', :lib => false
-  # config.gem 'radiant-event_calendar-extension', :lib => false
-  # config.gem 'radiant-taggable_events-extension', :lib => false
-  # config.gem 'radiant-event_map-extension', :lib => false
+  config.gem 'radiant-taggable-extension', :lib => false
+  config.gem 'radiant-library-extension', :lib => false
+  config.gem 'radiant-event_calendar-extension', :lib => false
+  config.gem 'radiant-taggable_events-extension', :lib => false
+  config.gem 'radiant-event_map-extension', :lib => false
   # config.gem 'radiant-reader-extension', :lib => false
   # config.gem 'radiant-forum-extension', :lib => false
   # config.gem 'radiant-sideboard-extension', :lib => false
