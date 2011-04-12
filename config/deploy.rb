@@ -22,6 +22,7 @@ after "deploy:setup" do
   run "mkdir -p #{shared_path}/assets/post_attachments" 
   run "mkdir -p #{shared_path}/assets/assets" 
   run "mkdir -p #{shared_path}/public" 
+  run "mkdir -p #{shared_path}/public/fonts" 
   run "mkdir -p #{shared_path}/config" 
   run "touch #{shared_path}/config/nginx.conf"
   sudo "ln -s #{shared_path}/config/nginx.conf /etc/nginx/sites-available/#{application}"
@@ -35,6 +36,7 @@ after "deploy:update" do
   run "ln -s #{shared_path}/public/favicon.ico #{current_release}/public/favicon.ico"
   run "ln -s #{shared_path}/public/robots.txt #{current_release}/public/robots.txt"
   run "ln -s #{shared_path}/public/images/local #{current_release}/public/images/local"
+  run "ln -s #{shared_path}/public/fonts #{current_release}/public/fonts"
   run "ln -s /var/www/radiant_beta #{current_release}/vendor/radiant"
 end
 
