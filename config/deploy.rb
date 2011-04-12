@@ -1,6 +1,6 @@
-set :application, "tb"
+set :application, "pk"
 set :scm, :git
-set :repository, "git@github.com:spanner/tb.git"
+set :repository, "git@github.com:spanner/tagged_blog.git"
 set :git_enable_submodules, 1
 set :ssh_options, { :forward_agent => true }
 
