@@ -21,26 +21,10 @@ ActiveRecord::Schema.define(:version => 20100810151922) do
     t.integer  "updated_by_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "uuid"
     t.integer  "original_width"
     t.integer  "original_height"
     t.string   "original_extension"
-    t.integer  "site_id"
-    t.string   "upload_token"
-    t.boolean  "furniture",          :default => false
-  end
-
-  create_table "calendars", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "category"
-    t.string   "slug"
-    t.integer  "created_by"
-    t.integer  "updated_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "lock_version"
-    t.integer  "site_id"
-    t.string   "keywords"
   end
 
   create_table "config", :force => true do |t|
@@ -50,111 +34,10 @@ ActiveRecord::Schema.define(:version => 20100810151922) do
 
   add_index "config", ["key"], :name => "key", :unique => true
 
-  create_table "event_recurrence_rules", :force => true do |t|
-    t.integer  "event_id"
-    t.boolean  "active",         :default => false
-    t.string   "period"
-    t.string   "basis"
-    t.integer  "interval",       :default => 1
-    t.datetime "limiting_date"
-    t.integer  "limiting_count"
-    t.integer  "created_by"
-    t.integer  "updated_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "lock_version"
-    t.integer  "site_id"
-  end
-
-  add_index "event_recurrence_rules", ["event_id"], :name => "index_event_recurrence_rules_on_event_id"
-
-  create_table "event_venues", :force => true do |t|
-    t.string   "title"
-    t.string   "address"
-    t.string   "url"
-    t.text     "description"
-    t.string   "postcode"
-    t.integer  "created_by"
-    t.integer  "updated_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "lock_version"
-    t.integer  "site_id"
-    t.string   "keywords"
-    t.string   "location"
-    t.string   "lat"
-    t.string   "lng"
-  end
-
-  add_index "event_venues", ["lat", "lng"], :name => "index_event_venues_on_lat_and_lng"
-  add_index "event_venues", ["location"], :name => "index_event_venues_on_location"
-
-  create_table "events", :force => true do |t|
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string   "title"
-    t.text     "description"
-    t.string   "location"
-    t.integer  "calendar_id"
-    t.string   "url"
-    t.integer  "site_id"
-    t.integer  "status_id",      :default => 1, :null => false
-    t.string   "uuid"
-    t.boolean  "all_day"
-    t.string   "priority"
-    t.string   "keywords"
-    t.string   "contact"
-    t.string   "postcode"
-    t.integer  "lock_version",   :default => 0
-    t.integer  "created_by_id"
-    t.datetime "created_at"
-    t.integer  "updated_by_id"
-    t.datetime "updated_at"
-    t.integer  "event_venue_id"
-    t.integer  "master_id"
-    t.boolean  "amended"
-    t.boolean  "deleted"
-    t.string   "lat"
-    t.string   "lng"
-  end
-
-  add_index "events", ["event_venue_id"], :name => "index_events_on_event_venue_id"
-  add_index "events", ["lat", "lng"], :name => "index_events_on_lat_and_lng"
-
   create_table "extension_meta", :force => true do |t|
     t.string  "name"
     t.integer "schema_version", :default => 0
     t.boolean "enabled",        :default => true
-  end
-
-  create_table "forums", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "site_id"
-    t.integer  "topics_count",  :default => 0
-    t.integer  "posts_count",   :default => 0
-    t.integer  "position"
-    t.integer  "lock_version",  :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "created_by_id"
-    t.integer  "updated_by_id"
-    t.integer  "reader_id"
-    t.boolean  "for_comments"
-  end
-
-  add_index "forums", ["site_id"], :name => "index_forums_on_site_id"
-
-  create_table "icals", :force => true do |t|
-    t.integer  "calendar_id"
-    t.string   "url"
-    t.integer  "last_refresh_count"
-    t.datetime "last_refresh_date"
-    t.string   "username"
-    t.string   "password"
-    t.boolean  "use_https"
-    t.integer  "refresh_interval"
-    t.integer  "site_id"
   end
 
   create_table "layouts", :force => true do |t|
@@ -213,20 +96,6 @@ ActiveRecord::Schema.define(:version => 20100810151922) do
   add_index "pages", ["slug", "parent_id"], :name => "pages_child_slug"
   add_index "pages", ["virtual", "status_id"], :name => "pages_published"
 
-  create_table "posts", :force => true do |t|
-    t.integer  "reader_id"
-    t.integer  "topic_id"
-    t.integer  "forum_id"
-    t.integer  "site_id"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "posts", ["forum_id", "created_at"], :name => "index_posts_on_forum_id"
-  add_index "posts", ["reader_id", "created_at"], :name => "index_posts_on_reader_id"
-  add_index "posts", ["site_id"], :name => "index_posts_on_site_id"
-
   create_table "sessions", :force => true do |t|
     t.string   "session_id"
     t.text     "data"
@@ -248,52 +117,6 @@ ActiveRecord::Schema.define(:version => 20100810151922) do
   end
 
   add_index "snippets", ["name"], :name => "name", :unique => true
-
-  create_table "taggings", :force => true do |t|
-    t.integer "tag_id"
-    t.string  "tagged_type"
-    t.integer "tagged_id"
-  end
-
-  add_index "taggings", ["tag_id", "tagged_id", "tagged_type"], :name => "index_taggings_on_tag_id_and_tagged_id_and_tagged_type", :unique => true
-
-  create_table "tags", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "created_by_id"
-    t.integer  "updated_by_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "site_id"
-    t.integer  "page_id"
-    t.boolean  "visible"
-    t.string   "metaphone"
-    t.string   "metaphone_secondary"
-  end
-
-  add_index "tags", ["title"], :name => "index_tags_on_title", :unique => true
-
-  create_table "topics", :force => true do |t|
-    t.integer  "forum_id"
-    t.integer  "site_id"
-    t.integer  "reader_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "replied_at"
-    t.integer  "hits",          :default => 0
-    t.boolean  "sticky",        :default => false
-    t.integer  "posts_count",   :default => 0
-    t.integer  "first_post_id"
-    t.integer  "last_post_id"
-    t.boolean  "locked",        :default => false
-    t.integer  "replied_by_id"
-  end
-
-  add_index "topics", ["forum_id", "replied_at"], :name => "index_topics_on_forum_id_and_replied_at"
-  add_index "topics", ["forum_id", "sticky", "replied_at"], :name => "index_topics_on_sticky_and_replied_at"
-  add_index "topics", ["forum_id"], :name => "index_topics_on_forum_id"
-  add_index "topics", ["site_id"], :name => "index_topics_on_site_id"
 
   create_table "users", :force => true do |t|
     t.string   "name",          :limit => 100

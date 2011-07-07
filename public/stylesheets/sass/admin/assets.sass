@@ -1,5 +1,10 @@
 @import "base"
 
+p.asset
+  img.preview
+    border: 5px solid white
+    +box-shadow
+    
 .asset_filters
   float: left
   padding: 2px 0
@@ -22,83 +27,7 @@
         color: white
         text-shadow: 0 1px 0 #333
 
-table.index#assets
-  td.icon
-    text-align: right
-    width: 40px
-    padding-top: 6px
-    padding-bottom: 8px
-    padding-right: 0
-    img
-      background-color: #f5f5f5
-      +background-clip(border-box)
-      +border-radius(3px)
-      +box-shadow(rgba(0,0,0,0.3), 1px, 1px, 2px)
-      display: block
-      overflow: hidden
-  th.content_type, td.content_type
-    width: 120px
-  td.content_type
-    font-size: 10px
-    font-weight: normal
-  th.actions, td.actions
-    width: 180px
-    a.action
-      color: black
-      text-decoration: none
-      &:hover, &.hover
-        background: #d8d8d8
-        +linear-gradient(color-stops(#fff, #ccc))
-        border: 1px solid #a5c9df
-        margin: 0 24px 0 0
-        +border-radius
-      &:active, &.active
-        background: #d8d8d8
-        +linear-gradient(color-stops(#ccc, #fff))
-      &.selected
-        background: #c5e0f5
-        +linear-gradient(color_stops(#e5f5ff, #c5e0ff))
-        border: 1px solid #a5c9df
-        margin: 0 24px 0 0
-        +border-top-radius
-        +border-bottom-radius(0)
-      &.confirmed
-        color: #666
-  &.waiting
-    opacity: 0.5
-
-#upload_assets a
-  color: black
-  font-weight: bold
-  text-decoration: none
-  &:hover
-    color: blue
-    text-decoration: underline
-
-.attachment_tools
-  float: right
-  ul
-    +inline-list
-  li
-    padding-left: 1em
-  a
-    color: white !important
-    text-shadow: 1px 1px 0 #888
-
-#upload_asset
-  p.upload
-    background: #e5e5e5
-    +linear-gradient(color-stops(#f5f5f5, #ddd))
-    border: 1px solid #ccc
-    +border-radius(4px)
-    +box-shadow(white, 0, 1px, 0, inset)
-    padding: 1em
-    label
-      display: none
-  iframe
-    display: none
-
-#attach_asset
+.popup 
   div.toolbar
     background: white
     +linear-gradient(color-stops(white, #ddd))
@@ -112,7 +41,7 @@ table.index#assets
     .right
       float: right
     form.search
-      padding: 2px 2px 0
+      padding: 4px 2px 0
       input[type=search]
         font-size: 12px
         +border-radius(100px)
@@ -124,54 +53,157 @@ table.index#assets
         +box-shadow(rgba(black, 0.2), 0, 1px, 0, inset)
         width: 180px
         padding: 2px 8px 2px 20px
+
+#upload_holders
+  display: none
+
+#attach_asset
   .viewport
     overflow-x: hidden
-
-.attachment_list
+    width: 610px
+    height: 310px
+    
+.attachment_actions
+  text-align: right
+  margin-bottom: -1em
   ul
-    padding: 1em
-    margin: 1em 0
-    height: 110px
-    overflow-y: hidden
-    overflow-x: auto
-    li
-      position: relative
-      display: inline
+    +inline-list
+  li
+    padding-left: 1em
+  a
+    color: white !important
+    text-shadow: 1px 1px 0 #888
+
+.assets
+  padding-left: 5px
+  padding-right: 5px
+  ul
+    li.asset
+      display: block
       float: left
-      margin: 0 10px 0 0
-      img
-        padding: 5px
-        background-color: white
-        +box-shadow
-      .controls
+      margin: 8px 0 0 8px
+      width: 110px
+      height: 110px
+      position: relative
+      line-height: 1.2em
+      .front, .back
+        display: block
+        background: #e6eaed
+        border: 5px solid white
         position: absolute
-        display: none
-        top: 5px
-        left: 10px
-        input
-          display: none
-        a, span.label
-          display: block
-          margin: 5px 10px
-          width: 58px
-          padding: 4px 6px
-          font-size: 90%
-          text-decoration: none
-          text-align: center
-          white-space: nowrap
+        width: 100px
+        height: 100px
+        text-align: center
+      .front
+        +box-shadow
+        text-align: center
+      .back
+        color: #333
+        overflow: hidden
+        +opacity(0)
+      .title
+        color: #333
+        font-size: 10px
+        overflow: hidden
+        margin: 10px 4px
+        height: 15px
+        line-height: 15px
+        text-overflow: ellipsis
+      .icon
+        height: 63px
+        line-height: 63px
+        img
+          vertical-align: bottom
+      ul.actions
+        li
+          margin: 5px 0
+          padding: 0 10px
+          font-size: 10px
         a
-          +border-radius(5px)
-          background-color: #666
-          color: white
-          &.remove, &.detach
-            background-color: #c00
-          &.attach, &.insert
-            background-color: #0c0
-        span.label
-          color: white
-          +text-shadow(#000, 0, 0, 3px)
-      &.unsaved
-        opacity: 0.4
-      &:hover
-        .controls
+          background: #666
+          background: rgba(black, 0.8)
+          +border-radius
+          color: #ddd
           display: block
+          padding: 2px 10px
+          text-decoration: none
+          &:hover
+            background: #999
+            background: rgba(black, 0.6)
+            color: white
+      &.unsaved
+        .front
+          opacity: 0.4
+      &:hover
+        .back
+          +opacity(1)
+          background: rgba(white, 0.6)
+      &.waiting
+        background-color: #E6EAED
+        .back
+          display: none
+        .front
+          background: transparent url(/images/admin/spinner.gif) no-repeat center center
+          img
+            opacity: 0.2
+    
+#attachment_list.assets
+  background: #7e7e7e
+  +border-bottom-radius
+  margin: -1em 0.5em 1em 0.5em
+  overflow-y: hidden
+  overflow-x: auto
+  ul.empty
+    display: none
+  p.note
+    font-size: 80%
+    margin: 0
+    padding: 8px
+    clear: left
+    span.message
+      float: right
+      color: #aaa
+      &.important
+        color: #d99
+  ul.sortable
+    li.asset
+      div.title
+        cursor: move
+        &:hover
+          font-weight: bold
+     
+#assets_table.assets
+  position: relative
+  p
+    padding: 40px
+      top: 45px
+    color: silver
+    text-align: center
+    font:
+      size: 75%
+      style: oblique
+  ul
+    clear: both
+    li.asset
+      input
+        display: none
+  div.pagination
+    position: relative
+    clear: left
+    width: 100%
+    height: 2.3em
+    font-size: 80%
+    text-align: center
+    a
+      color: white
+      text-decoration: none
+      &:hover
+        background-color: #bbb
+        color: #444
+    span
+      color: #bbb
+    span, a
+      display: block
+      float: left
+      padding: 5px
+      line-height: 1.5em

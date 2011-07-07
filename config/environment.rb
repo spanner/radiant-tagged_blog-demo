@@ -17,11 +17,11 @@ Radiant::Initializer.run do |config|
   # Only load the extensions named here, in the order given. By default all
   # extensions in vendor/extensions are loaded, in alphabetical order. :all
   # can be used as a placeholder for all extensions not explicitly named.
-  # config.extensions = [ :all ]
+  config.extensions = [ :layouts, :mailer_layouts, :dashboard, :taggable, :reader, :forum, :all ]
   
   # By default, only English translations are loaded. Remove any of these from
   # the list below if you'd like to provide any of the supported languages
-	config.extensions = [ :layouts, :mailer_layouts, :taggable, :assets, :all, :library ]
+  # config.extensions = [ :layouts, :mailer_layouts, :taggable, :all, :library ]
 
   config.ignore_extensions [:dutch_language_pack, :french_language_pack, :german_language_pack,
                             :italian_language_pack, :japanese_language_pack, :russian_language_pack,
@@ -77,20 +77,23 @@ Radiant::Initializer.run do |config|
     end
   end
 
-  config.gem 'will_paginate'
-  config.gem 'compass'
-  
-  config.gem 'paperclip'
-  config.gem 'radiant-layouts-extension', :lib => false
-  config.gem 'radiant-mailer_layouts-extension', :lib => false
-  config.gem 'radiant-taggable-extension', :lib => false
-  config.gem 'radiant-library-extension', :lib => false
-  config.gem 'radiant-event_calendar-extension', :lib => false
-  config.gem 'radiant-taggable_events-extension', :lib => false
-  config.gem 'radiant-event_map-extension', :lib => false
-  # config.gem 'radiant-reader-extension', :lib => false
-  # config.gem 'radiant-forum-extension', :lib => false
-  # config.gem 'radiant-sideboard-extension', :lib => false
+  config.gem 'authlogic', :version => "~> 2.1.6"
+  config.gem 'rack-cache', :version => "~> 1.0.2"
+  config.gem 'RedCloth', :version => '~> 3.0.4'
+  config.gem 'haml', :version => '~> 3.1.1'
+  config.gem 'sass', :version => '~> 3.1.1'
+  config.gem 'compass', :version => '~> 0.11.1'
+  config.gem 'will_paginate', :version => '~> 2.3.11'
+  config.gem 'delocalize', :version => '~> 0.2.3'
+  config.gem 'radiant-clipped-extension', :version => "~> 1.0.2"
+
+  config.gem 'radiant-layouts-extension', :version => '~> 1.1.3'
+  config.gem 'radiant-mailer_layouts-extension', :version => '~> 0.1.1', :lib => false
+  config.gem 'radiant-taggable-extension', :version => '2.0.0.rc2'
+  config.gem 'radiant-reader-extension', :version => "~> 2.0.0.rc5"
+  config.gem 'radiant-forum-extension', :version => "~> 3.0.0.rc2"
+  config.gem 'radiant-dashboard-extension', :version => '2.0.0.rc2'
+  config.gem 'radiant-blog-extension', :version => '~> 1.1.0'
 
   config.after_initialize do
     # Add new inflection rules using the following format:
