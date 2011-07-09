@@ -1,0 +1,189 @@
+@import compass/css3
+@import admin/grid
+
+$grid-border-radius: 4px
+$shortcut-bg: #c00
+$shortcut-bg-hover: #d11
+
+=buttonbg($color: $shortcut-bg)
+  background-color: $color
+  +linear-gradient(color-stops($color, darken($color,8), $color, $color))
+
+body.dashboard
+  background-color: #9b1200
+  +linear-gradient(color-stops(#9b1200, #cc0000))
+  color: white
+  height: 100%
+  margin: 0
+
+#dashboard
+  +grid-container
+  margin-bottom: 40px
+  .shortcut
+    +grid(2)
+    height: 60px
+  #user_info
+    +grid(4)
+    height: 60px
+  #recent_pages
+    +grid(5)
+    height: 300px
+  #draft_pages
+    +grid(5)
+    height: 300px
+  #user_tasks
+    +grid(2)
+    height: 300px
+  #recent_assets
+    +grid(12)
+    min-height: 110px
+
+.dashboard_module
+  overflow-x: hidden
+  overflow-y: auto
+  background-color: white
+  +linear-gradient(color-stops(#ffffff, #eeeeee))
+  +box-shadow
+  +border-radius($grid-border-radius)
+  color: #333
+  font-size: 90%
+  .header
+    padding: 5px 10px 0 10px
+  .blockcontent
+    padding: 0 10px 5px 10px
+  .pages
+    .page
+      margin-bottom: 0.5em
+      h3
+        margin: 0
+        a.page
+          color: black
+          text-decoration: none
+          &:hover
+            color: #06c
+            text-decoration: underline
+        a.public
+          text-decoration: none
+          color: #c00
+      p.minor
+        margin-top: -3px
+        margin-left: 32px
+  h2
+    color: #bbb8ac
+    font-weight: bold
+    margin: 0.5em 0
+    line-height: 1
+  p.subhead
+    margin: 0 0 0.25em 0
+    color: #bbb8ac
+  p.minor
+    margin: 1em 0 0 0
+    overflow: hidden
+    font-size: 80%
+    color: #bbb8ac
+    a
+      color: #bbb8ac
+      text-decoration: none
+      &:hover
+        color: #06c
+  p.inset
+    margin-left: 44px
+  table
+    width: 100%
+    margin: 0 -10px
+  ul.links
+    padding-left: 14px
+    li
+      list-style: square
+      span.title
+        font-weight: bold
+        font-size: 120%
+      a
+        color: black
+        text-decoration: none
+        &.admin
+          color: #c00
+        &.notyet
+          color: #ccc
+          text-decoration: line-through
+        &:hover
+          color: #06c
+  a.icon
+    img
+      border: 2px solid white
+      margin: 0 2px 5px 0
+  p.note
+    margin: 0.5em
+    font-size: 85%
+  &.assets 
+    overflow-y: hidden
+    overflow-x: auto
+    p
+      padding-top: 1em
+      clear: left
+
+.shortcut
+  overflow: hidden
+  +buttonbg
+  font-size: 100%
+  height: 60px
+  text-align: left
+  color: white
+  text-decoration: none
+  &.empty
+    +buttonbg(#b23839)
+    color: #d88
+  span
+    display: block
+    margin: 14px
+    padding-left: 40px
+    line-height: 1.1
+    background-position: top left
+    background-repeat: no-repeat
+    &.new
+      background-image: url("/images/admin/dashboard/link.png")
+    &.page
+      background-image: url("/images/admin/dashboard/page.png")
+    &.person
+      background-image: url("/images/admin/dashboard/person.png")
+    &.asset
+      background-image: url("/images/admin/dashboard/asset.png")
+    &.topic
+      background-image: url("/images/admin/dashboard/topic.png")
+  
+a.shortcut:hover
+  +buttonbg($shortcut-bg-hover)
+  color: white
+
+#user_info
+  img.avatar
+    +box-shadow
+    float: left
+    margin-right: 8px
+    margin-top: 12px
+  h1
+    font-weight: bold
+    margin: 0.5em 0 0 0
+    font-size: 1.6em
+    line-height: 1
+    a
+      color: black
+      text-decoration: none
+      &:hover
+        color: #06c
+  p.minor
+    margin: 0
+
+p.footer
+  clear: left
+  margin: 10px
+  padding-top: 20px
+  font-size: 80%
+  color: #bbb8ac
+  a
+    color: #bbb8ac
+    &:hover
+      color: #06c
+  
+.hanging
+  overflow: hidden

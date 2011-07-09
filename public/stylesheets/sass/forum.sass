@@ -1,89 +1,90 @@
 @import compass/css3
-@import reader.sass
-@import gallery.sass
 
-div#forum
+$dark: #4d4e53
+$mid: #8c8d8e
+$pale: #afafaf
+$paler: #bdbdbd
+$verypale: #d6d6d4
+$accent: #d1005d
+$warning: red
+
+=functional
+  font-family: helvetica, arial, sans-serif
+  font-weight: normal
+=strong
+  +functional
+  font-weight: bold
+=small
+  +functional
+  font-size: 80%
+
+div.header
+  margin: 2em 0 1em 0
+  h1.title
+    font-size: 275%
+    line-height: 1
+    margin: 0
+    span.breadhead
+      display: block
+      font-size: 40%
+      line-height: 0.6
+  p.context
+    margin: 0
+
+div.forum
+  clear: left
+  h2
+    line-height: 1
+    margin: 0
+    font-size: 200%
   div.forum
     div.forum_wrapper
       margin: 2em 0
-      div.forum_header
-        h2
-          +strong
-          line-height: 1
-          margin: 0
       div.forum_description
         p
           margin: 0
   div.post
     clear: left
+    margin: 1em 0 2em 0
     &.waiting
       color: $mid
     &.deleted
       text-decoration: line-through
       color: $mid
-    div.post_wrapper
-      margin: 1em 0 2em 0
-      div.post_header
-        h2
-          line-height: 1
-          margin: 0
-          &.reply
-            a
-              color: $mid
-              &:hover
-                color: $accent
+    div.post_header
+      h2.reply
         a
+          color: $mid
           &:hover
             color: $accent
-          &.waiting
-            color: $mid
-            padding-left: 18px
-            background: transparent url(/images/furniture/wait_16_grey.gif) no-repeat left top
-          &.edit_post, &.delete_post
-            color: white
-            padding: 1px 3px
-            +border-radius(3px)
-            font-size: 75%
-            opacity: 0.2
-            &:hover
-              opacity: 1
-              color: white
-          &.edit_post
-            background-color: green
-          &.delete_post
-            background-color: red
-      div.post_body
-        position: relative
-        p
-          margin-top: .25em        
-        blockquote
-          color: $mid
-          border-left-width: 5px
-          border-left-style: solid
-          border-left-color: #cacac8
-          margin: 0
-          padding-left: 20px
-      div.post_attachments
-        +small
-      p.voices
-        margin: 0
-      p.replies
-        clear: left
-        +small
-        margin-top: 0
-        color: $paler
-        a
-          color: $pale
-    &.first
-      div.post_wrapper
-        margin-top: 0
-        padding-bottom: 1em
-        border-bottom: 3px dotted $mid
-
-    div.post_form
-      margin: 0
+      a
+        &:hover
+          color: $accent
+    div.post_body
+      position: relative
       p
+        margin-top: .25em        
+      blockquote
+        color: $mid
+        border-left-width: 5px
+        border-left-style: solid
+        border-left-color: #cacac8
         margin: 0
+        padding-left: 20px
+    div.post_attachments
+      +small
+    p.voices
+      margin: 0
+    p.replies
+      clear: left
+      +small
+      margin-top: 0
+      color: $paler
+      a
+        color: $pale
+
+    div.remote_form
+      margin: 0
     div.post_removal
       p
         margin: 0
@@ -97,22 +98,35 @@ div#forum
         font-size: 1.4
 
   p.context
-    +functional
+    +small
     line-height: 1.2
-    margin: 0 0 10px 0
+    margin: 5px 0 10px 0
 
   div#search
     overflow: hidden
     margin: 0 0 2em 0
-    h2
-      margin: 0
     p
       width: 24%
       margin-right: 1%
       float: left
       &.buttons
         padding-top: 1.5em
-  
+
+a.edit_post, a.delete_post
+  color: white
+  padding: 1px 3px
+  +border-radius(3px)
+  font-size: 75%
+  opacity: 0.2
+  &:hover
+    opacity: 1
+    color: white !important
+    +box-shadow
+a.edit_post
+  background-color: green
+a.delete_post
+  background-color: red
+
 div.upload_stack, div.post_attachments
   margin: 0 0 30px 0
   h4
@@ -179,6 +193,14 @@ div#forum_search
       padding: 5px
       margin: 0 0 0 6px
 
+a.post
+  font-size: 140%
+  padding-left: 20px
+  background: url(/images/furniture/post.png) no-repeat scroll 0 0
+  &:hover
+    color: $accent
+    background-position: 0 -28px
+
 img.feedicon
   margin: 8px 0
 
@@ -189,10 +211,11 @@ a.rssfeed
   width: 14px
 
 .context, .updatenote
-  +functional
+  +small
+  line-height: 1.2
   color: $pale
 
-p.waiting, span.waiting
+p.waiting, span.waiting, a.waiting
   color: $mid
   padding-left: 18px
   background: transparent url(/images/furniture/wait_16_grey.gif) no-repeat left top
@@ -207,6 +230,13 @@ div.speaker
   width: 50px
   height: 50px
   margin-right: 8px
+  margin-top: 5px
+  
+p.add_comment, p.add_reply
+  font-size: 200%
+
+span.formnote
+  +small
 
 // emoticons in message display are interpolated by our redcloth extension as <img class="emoticon something" />
 

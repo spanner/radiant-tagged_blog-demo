@@ -1,0 +1,25 @@
+// This is a very minimal translation of the 960 grid system to sass.
+// It omits all the clutter by providing only mixins and no grid classes.
+
+$grid-container-width: 100%
+$grid-columns: 12
+$grid-margin: 1%
+$box: $grid-container-width / $grid-columns
+
+=grid-container
+  width: $grid-container-width
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+
+=grid($count: 3)
+  position: relative
+  display: inline
+  float: left
+  width: $count * $box - $grid-margin
+  margin-right: $grid-margin
+  margin-top: $grid-margin
+
+=offset($count: 1)
+  margin-left: $count * $box
