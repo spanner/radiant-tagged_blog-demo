@@ -1,17 +1,16 @@
 @import compass/css3
 @import admin/grid
 
-$grid-border-radius: 4px
-$shortcut-bg: #c00
-$shortcut-bg-hover: #d11
+$grid-border-radius: 3px
+$shortcut-bg: #8c8d8e
+$shortcut-bg-hover: #99a098
 
 =buttonbg($color: $shortcut-bg)
   background-color: $color
   +linear-gradient(color-stops($color, darken($color,8), $color, $color))
 
 body.dashboard
-  background-color: #9b1200
-  +linear-gradient(color-stops(#9b1200, #cc0000))
+  background-color: #8c8d8e
   color: white
   height: 100%
   margin: 0
@@ -43,7 +42,7 @@ body.dashboard
   overflow-y: auto
   background-color: white
   +linear-gradient(color-stops(#ffffff, #eeeeee))
-  +box-shadow
+  +box-shadow()
   +border-radius($grid-border-radius)
   color: #333
   font-size: 90%
