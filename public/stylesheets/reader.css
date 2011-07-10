@@ -1,0 +1,181 @@
+/* line 21, sass/reader.sass */
+div.error, div.notice {
+  position: absolute;
+  width: 300px;
+  top: 50px;
+  right: 50px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: #4d4e53 2px 2px 4px;
+  -webkit-box-shadow: #4d4e53 2px 2px 4px;
+  -o-box-shadow: #4d4e53 2px 2px 4px;
+  box-shadow: #4d4e53 2px 2px 4px;
+  color: white;
+  padding: 1px 1em;
+}
+/* line 30, sass/reader.sass */
+div.error a.closer, div.notice a.closer {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 37, sass/reader.sass */
+div.notice {
+  background-color: #b2e5b2;
+  color: #006600;
+}
+
+/* line 40, sass/reader.sass */
+div.error {
+  background-color: #f3c2c2;
+  color: #770000;
+}
+
+/* line 45, sass/reader.sass */
+div#readers .reader {
+  margin-bottom: 1em;
+}
+/* line 47, sass/reader.sass */
+div#readers h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+/* line 51, sass/reader.sass */
+div.activation_required {
+  color: #d1005d;
+}
+
+/* line 54, sass/reader.sass */
+p.administrative {
+  font-family: helvetica, arial, sans-serif;
+  color: #afafaf;
+}
+
+/* line 58, sass/reader.sass */
+img.gravatar {
+  -moz-box-shadow: #4d4e53 2px 2px 4px;
+  -webkit-box-shadow: #4d4e53 2px 2px 4px;
+  -o-box-shadow: #4d4e53 2px 2px 4px;
+  box-shadow: #4d4e53 2px 2px 4px;
+  border: 3px solid white;
+}
+/* line 61, sass/reader.sass */
+img.gravatar.thumbnail {
+  margin: 2px 10px 10px 0;
+}
+/* line 63, sass/reader.sass */
+img.gravatar.big {
+  margin: 8px 10px 4px 0;
+}
+/* line 65, sass/reader.sass */
+img.gravatar.tiny {
+  margin: 3px 6px 4px 0;
+  border: 1px solid white;
+}
+/* line 68, sass/reader.sass */
+img.gravatar.left {
+  float: left;
+}
+/* line 70, sass/reader.sass */
+img.gravatar.right {
+  float: right;
+  margin: 8px 0 4px 10px;
+}
+
+/* line 74, sass/reader.sass */
+form.friendly {
+  margin: 0 0 2em 0;
+}
+/* line 76, sass/reader.sass */
+form.friendly p {
+  margin: 1em 0 0 0;
+}
+/* line 78, sass/reader.sass */
+form.friendly input.login {
+  width: 95%;
+  font-size: 140%;
+}
+/* line 81, sass/reader.sass */
+form.friendly input.titular {
+  width: 95%;
+  font-size: 200%;
+}
+/* line 84, sass/reader.sass */
+form.friendly textarea, form.friendly select {
+  width: 95%;
+}
+/* line 86, sass/reader.sass */
+form.friendly textarea {
+  height: 400px;
+}
+/* line 88, sass/reader.sass */
+form.friendly input.standard {
+  width: 95%;
+}
+/* line 90, sass/reader.sass */
+form.friendly span.formnote {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-size: 80%;
+  color: #8c8d8e;
+}
+/* line 94, sass/reader.sass */
+form.friendly label.required {
+  font-weight: bold;
+}
+/* line 96, sass/reader.sass */
+form.friendly div.hidden, form.friendly div.innocuous {
+  display: none;
+}
+/* line 98, sass/reader.sass */
+form.friendly span.password {
+  display: block;
+  width: 95%;
+  padding: 5px;
+  font-size: 1.2;
+  line-height: 1.2;
+  color: #afafaf;
+  border: 1px solid #afafaf;
+}
+/* line 107, sass/reader.sass */
+form.friendly span.error-with-field input, form.friendly span.error-with-field select {
+  border: 1px solid red;
+  color: red;
+}
+/* line 110, sass/reader.sass */
+form.friendly span.error-with-field span.error {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-size: 80%;
+  line-height: 1.4;
+  background-color: red;
+  color: white;
+  padding: 3px 6px;
+  margin: -5px 0 0 6px;
+  cursor: pointer;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: #4d4e53 2px 2px 4px;
+  -webkit-box-shadow: #4d4e53 2px 2px 4px;
+  -o-box-shadow: #4d4e53 2px 2px 4px;
+  box-shadow: #4d4e53 2px 2px 4px;
+}
+/* line 120, sass/reader.sass */
+form.friendly span.error-with-field span.error a.closer {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}

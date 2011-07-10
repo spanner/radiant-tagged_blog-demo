@@ -1,0 +1,49 @@
+/* line 4, ../sass/admin/forum_dashboard.sass */
+#dashboard #recent_topics {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 32.333%;
+  margin-right: 1%;
+  margin-top: 1%;
+  height: 500px;
+}
+/* line 7, ../sass/admin/forum_dashboard.sass */
+#dashboard #recent_comments {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 32.333%;
+  margin-right: 1%;
+  margin-top: 1%;
+  height: 500px;
+}
+
+/* line 12, ../sass/admin/forum_dashboard.sass */
+.blockcontent h3 {
+  margin-top: 0.25em;
+}
+/* line 14, ../sass/admin/forum_dashboard.sass */
+.blockcontent h3 a.topic {
+  color: black;
+  text-decoration: none;
+}
+/* line 17, ../sass/admin/forum_dashboard.sass */
+.blockcontent h3 a.topic:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+/* line 20, ../sass/admin/forum_dashboard.sass */
+.blockcontent h3 span.context {
+  font-size: 10px;
+  font-weight: normal;
+  color: #bbb8ac;
+}
+/* line 24, ../sass/admin/forum_dashboard.sass */
+.blockcontent h3 span.context a {
+  color: #939187;
+}
+/* line 26, ../sass/admin/forum_dashboard.sass */
+.blockcontent p.excerpt {
+  margin-top: 0.25em;
+}

@@ -1,0 +1,396 @@
+/* line 37, ../sass/admin/calendar.sass */
+table.index td.subscription-title {
+  font-size: 115%;
+  font-weight: bold;
+}
+
+/* line 42, ../sass/admin/calendar.sass */
+span.calendar_actions img {
+  opacity: 0.5;
+}
+/* line 45, ../sass/admin/calendar.sass */
+span.calendar_actions a img {
+  opacity: 1;
+}
+
+/* line 50, ../sass/admin/calendar.sass */
+table.calendar {
+  border-collapse: collapse;
+  border: 1px solid #cccccc;
+  color: #333333;
+}
+/* line 54, ../sass/admin/calendar.sass */
+table.calendar th, table.calendar td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  vertical-align: top;
+}
+/* line 59, ../sass/admin/calendar.sass */
+table.calendar tr.monthName th {
+  font-weight: normal;
+  text-align: right;
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+  color: black;
+}
+/* line 66, ../sass/admin/calendar.sass */
+table.calendar tr.monthName tr.dayName th {
+  font-size: 0.7em;
+  padding-top: 0.6em;
+  padding-bottom: 0.3em;
+}
+/* line 71, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td div {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+/* line 75, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.other_month {
+  color: #cccccc;
+  background-color: white;
+}
+/* line 78, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.other_month a {
+  color: #cccccc;
+}
+/* line 80, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.weekend_day {
+  background-color: #eeeeee;
+}
+/* line 82, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.eventful {
+  background-color: #ffeeee;
+}
+/* line 84, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.eventful_weekend {
+  background-color: #eedddd;
+}
+/* line 86, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.today {
+  background-color: #eeeeff;
+  font-weight: bold;
+  color: #0000cc;
+}
+/* line 90, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td.weekend_today {
+  background-color: #ddddee;
+}
+/* line 93, ../sass/admin/calendar.sass */
+table.calendar tr.monthName th a {
+  display: block;
+  color: #cccccc;
+  font-weight: lighter;
+}
+/* line 97, ../sass/admin/calendar.sass */
+table.calendar tr.monthName th a:hover {
+  color: #cc0000;
+}
+/* line 100, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td a {
+  display: block;
+  color: #cc0000;
+  text-decoration: none;
+  margin: 0 0 4px 0;
+  font-weight: bold;
+}
+/* line 106, ../sass/admin/calendar.sass */
+table.calendar tr.monthName td ul {
+  font-size: 75%;
+  margin: 0;
+  padding: 0 0 0 12px;
+  list-style: square;
+}
+
+/* line 115, ../sass/admin/calendar.sass */
+table#events td.datemark {
+  width: 40px;
+  vertical-align: top;
+  text-align: center;
+  line-height: 1;
+}
+/* line 120, ../sass/admin/calendar.sass */
+table#events td.datemark a {
+  color: #cc0000;
+  text-decoration: none;
+}
+/* line 123, ../sass/admin/calendar.sass */
+table#events td.datemark span.month {
+  display: block;
+  margin-top: 5px;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 80%;
+  text-transform: uppercase;
+}
+/* line 130, ../sass/admin/calendar.sass */
+table#events td.datemark span.day {
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-size: 160%;
+}
+/* line 135, ../sass/admin/calendar.sass */
+table#events td.event {
+  width: 40%;
+  vertical-align: top;
+}
+/* line 138, ../sass/admin/calendar.sass */
+table#events td.event h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+/* line 141, ../sass/admin/calendar.sass */
+table#events td.event h3 a {
+  color: #cc0000;
+  text-decoration: none;
+}
+/* line 144, ../sass/admin/calendar.sass */
+table#events td.event p.description {
+  margin: 4px 0;
+  font-size: 80%;
+  color: #999999;
+}
+/* line 148, ../sass/admin/calendar.sass */
+table#events td.time, table#events td.location, table#events td.keywords, table#events td.recurrence {
+  font-size: 80%;
+  padding-top: 28px;
+  vertical-align: top;
+}
+
+/* line 157, ../sass/admin/calendar.sass */
+#content #event_form fieldset, #content #calendar_form fieldset {
+  border: 1px dotted #cdc295;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  clear: both;
+}
+/* line 163, ../sass/admin/calendar.sass */
+#content #event_form fieldset legend, #content #calendar_form fieldset legend {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 80%;
+  color: #b2aaa4;
+  line-height: 1.2;
+}
+/* line 165, ../sass/admin/calendar.sass */
+#content #event_form div, #content #calendar_form div {
+  position: relative;
+  overflow: visible;
+  clear: left;
+}
+/* line 170, ../sass/admin/calendar.sass */
+#content #event_form div p input.textbox, #content #event_form div p select.textbox, #content #event_form div p textarea, #content #calendar_form div p input.textbox, #content #calendar_form div p select.textbox, #content #calendar_form div p textarea {
+  width: 100%;
+  padding: 6px 0;
+  border: 1px solid #cdc295;
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 95%;
+}
+/* line 172, ../sass/admin/calendar.sass */
+#content #event_form div p.note, #content #calendar_form div p.note {
+  position: relative;
+  width: 25%;
+  float: right;
+  padding-top: 1.7em;
+}
+/* line 175, ../sass/admin/calendar.sass */
+#content #event_form div p.note a, #content #calendar_form div p.note a {
+  color: #cc0000;
+}
+/* line 178, ../sass/admin/calendar.sass */
+#content #event_form div#title p.event_title, #content #event_form div#title p.calendar_title, #content #event_form div#title p.keywords, #content #calendar_form div#title p.event_title, #content #calendar_form div#title p.calendar_title, #content #calendar_form div#title p.keywords {
+  margin-bottom: 1em;
+}
+/* line 180, ../sass/admin/calendar.sass */
+#content #event_form div#title p.event_title input, #content #event_form div#title p.calendar_title input, #content #event_form div#title p.keywords input, #content #calendar_form div#title p.event_title input, #content #calendar_form div#title p.calendar_title input, #content #calendar_form div#title p.keywords input {
+  font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+  font-size: 200%;
+}
+/* line 183, ../sass/admin/calendar.sass */
+#content #event_form div#title p.event_title, #content #calendar_form div#title p.event_title {
+  position: relative;
+  width: 72%;
+  float: left;
+}
+/* line 185, ../sass/admin/calendar.sass */
+#content #event_form div#title p.keywords, #content #calendar_form div#title p.keywords {
+  position: relative;
+  width: 25%;
+  float: right;
+}
+/* line 187, ../sass/admin/calendar.sass */
+#content #event_form div#title p.keywords input, #content #calendar_form div#title p.keywords input {
+  color: #cc0000;
+}
+/* line 189, ../sass/admin/calendar.sass */
+#content #event_form div#title p.calendar_category, #content #event_form div#title p.calendar_slug, #content #calendar_form div#title p.calendar_category, #content #calendar_form div#title p.calendar_slug {
+  float: left;
+  width: 35%;
+}
+/* line 191, ../sass/admin/calendar.sass */
+#content #event_form div#title p.calendar_category, #content #calendar_form div#title p.calendar_category {
+  margin-right: 2%;
+}
+/* line 194, ../sass/admin/calendar.sass */
+#content #event_form div#description p.description, #content #calendar_form div#description p.description {
+  margin-bottom: 0;
+}
+/* line 197, ../sass/admin/calendar.sass */
+#content #event_form div#ical p.url, #content #calendar_form div#ical p.url {
+  position: relative;
+  width: 72%;
+  float: left;
+  margin-top: 0;
+}
+/* line 200, ../sass/admin/calendar.sass */
+#content #event_form div#ical p.username, #content #event_form div#ical p.password, #content #calendar_form div#ical p.username, #content #calendar_form div#ical p.password {
+  float: left;
+  width: 35%;
+}
+/* line 202, ../sass/admin/calendar.sass */
+#content #event_form div#ical p.username, #content #calendar_form div#ical p.username {
+  margin-right: 2%;
+}
+/* line 205, ../sass/admin/calendar.sass */
+#content #event_form div#date p.start_date, #content #event_form div#date p.end_date, #content #calendar_form div#date p.start_date, #content #calendar_form div#date p.end_date {
+  float: left;
+  width: 35%;
+}
+/* line 207, ../sass/admin/calendar.sass */
+#content #event_form div#date p.start_date, #content #calendar_form div#date p.start_date {
+  margin-right: 2%;
+}
+/* line 209, ../sass/admin/calendar.sass */
+#content #event_form div#date p.problematic, #content #calendar_form div#date p.problematic {
+  color: #cc0000;
+}
+/* line 212, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence, #content #calendar_form div#recurrence p.recurrence {
+  position: relative;
+  width: 72%;
+  float: left;
+  margin-bottom: 0;
+}
+/* line 215, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_detail, #content #calendar_form div#recurrence p.recurrence span.recurrence_detail {
+  display: block;
+}
+/* line 217, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_interval, #content #calendar_form div#recurrence p.recurrence span.recurrence_interval {
+  float: left;
+  margin-right: 2%;
+}
+/* line 220, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_period, #content #calendar_form div#recurrence p.recurrence span.recurrence_period {
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+}
+/* line 224, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_basis, #content #calendar_form div#recurrence p.recurrence span.recurrence_basis {
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+}
+/* line 228, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_limit, #content #calendar_form div#recurrence p.recurrence span.recurrence_limit {
+  display: block;
+  float: left;
+  width: 35%;
+}
+/* line 232, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence span.recurrence_count, #content #calendar_form div#recurrence p.recurrence span.recurrence_count {
+  display: block;
+  float: left;
+}
+/* line 235, ../sass/admin/calendar.sass */
+#content #event_form div#recurrence p.recurrence input.short, #content #calendar_form div#recurrence p.recurrence input.short {
+  width: 2em;
+  text-align: center;
+}
+/* line 238, ../sass/admin/calendar.sass */
+#content #event_form div#venue, #content #event_form div#newvenue, #content #calendar_form div#venue, #content #calendar_form div#newvenue {
+  overflow: auto;
+}
+/* line 241, ../sass/admin/calendar.sass */
+#content #event_form div#venue p.existing_venue, #content #calendar_form div#venue p.existing_venue {
+  position: relative;
+  width: 72%;
+  float: left;
+}
+/* line 243, ../sass/admin/calendar.sass */
+#content #event_form div#venue p.existing_venue a, #content #calendar_form div#venue p.existing_venue a {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 80%;
+  color: #b2aaa4;
+  line-height: 1.2;
+  color: #cc0000;
+}
+/* line 247, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_title, #content #calendar_form div#new_venue p.venue_title {
+  position: relative;
+  width: 72%;
+  float: left;
+}
+/* line 249, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_title a, #content #calendar_form div#new_venue p.venue_title a {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 80%;
+  color: #b2aaa4;
+  line-height: 1.2;
+  color: #cc0000;
+}
+/* line 252, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_location, #content #calendar_form div#new_venue p.venue_location {
+  position: relative;
+  width: 72%;
+  float: left;
+}
+/* line 254, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_location textarea, #content #calendar_form div#new_venue p.venue_location textarea {
+  height: 5em;
+}
+/* line 256, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_postcode, #content #calendar_form div#new_venue p.venue_postcode {
+  position: relative;
+  width: 25%;
+  float: right;
+}
+/* line 258, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_postcode span.note, #content #calendar_form div#new_venue p.venue_postcode span.note {
+  display: block;
+  margin-top: 4px;
+}
+/* line 261, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_description, #content #calendar_form div#new_venue p.venue_description {
+  clear: both;
+}
+/* line 263, ../sass/admin/calendar.sass */
+#content #event_form div#new_venue p.venue_description textarea, #content #calendar_form div#new_venue p.venue_description textarea {
+  height: 5em;
+}
+/* line 266, ../sass/admin/calendar.sass */
+#content #event_form div#description textarea, #content #calendar_form div#description textarea {
+  height: 8em;
+}
+/* line 268, ../sass/admin/calendar.sass */
+#content #event_form .note, #content #event_form label.minor, #content #calendar_form .note, #content #calendar_form label.minor {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: lighter;
+  font-size: 80%;
+  color: #b2aaa4;
+  line-height: 1.2;
+  display: inline;
+}
+/* line 271, ../sass/admin/calendar.sass */
+#content #event_form input.date, #content #calendar_form input.date {
+  background: white url(/images/event_calendar/date_input.png) no-repeat right top;
+}
+/* line 273, ../sass/admin/calendar.sass */
+#content #event_form .hidden, #content #calendar_form .hidden {
+  display: none;
+}

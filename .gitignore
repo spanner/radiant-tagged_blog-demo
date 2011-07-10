@@ -9,8 +9,6 @@ doc/app
 public/assets
 public/assets/*
 public/stylesheets/sass/.sass-cache/*
-public/stylesheets/admin/*.css
-public/stylesheets/*.css
 .sass_cache
 vendor/radiant
 config/database.yml
