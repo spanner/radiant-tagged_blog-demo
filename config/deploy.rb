@@ -34,7 +34,7 @@ after "deploy:update" do
   run "ln -s #{shared_path}/public/favicon.ico #{current_release}/public/favicon.ico"
   run "ln -s #{shared_path}/public/robots.txt #{current_release}/public/robots.txt"
   run "ln -s #{shared_path}/public/images/local #{current_release}/public/images/local"
-  run "ln -s #{shared_path}/public/fonts #{current_release}/public/fonts"
+  # run "ln -s #{shared_path}/public/fonts #{current_release}/public/fonts"
   run "mkdir -p #{current_release}/vendor"
   run "ln -s /var/www/radiant1 #{current_release}/vendor/radiant"
 end
