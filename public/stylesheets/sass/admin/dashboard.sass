@@ -41,9 +41,9 @@ body.dashboard
   overflow-x: hidden
   overflow-y: auto
   background-color: white
-  +linear-gradient(color-stops(#ffffff, #eeeeee))
-  +box-shadow()
   +border-radius($grid-border-radius)
+  +linear-gradient(color-stops(#ffffff, #eeeeee))
+  +box-shadow
   color: #333
   font-size: 90%
   .header
@@ -130,8 +130,8 @@ body.dashboard
   color: white
   text-decoration: none
   &.empty
-    +buttonbg(#b23839)
-    color: #d88
+    background: none
+    color: #c0c1c3
   span
     display: block
     margin: 14px

@@ -81,6 +81,12 @@ body.dashboard {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
   background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
   background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
@@ -91,12 +97,6 @@ body.dashboard {
   -webkit-box-shadow: 0px 0px 5px #333333;
   -o-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
   color: #333333;
   font-size: 90%;
 }
@@ -243,14 +243,8 @@ body.dashboard {
 }
 /* line 132, ../sass/admin/dashboard.sass */
 .shortcut.empty {
-  background-color: #b23839;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b23839), color-stop(33.333%, #932e2f), color-stop(66.667%, #b23839), color-stop(100%, #b23839));
-  background-image: -webkit-linear-gradient(top, #b23839, #932e2f, #b23839, #b23839);
-  background-image: -moz-linear-gradient(top, #b23839, #932e2f, #b23839, #b23839);
-  background-image: -o-linear-gradient(top, #b23839, #932e2f, #b23839, #b23839);
-  background-image: -ms-linear-gradient(top, #b23839, #932e2f, #b23839, #b23839);
-  background-image: linear-gradient(top, #b23839, #932e2f, #b23839, #b23839);
-  color: #dd8888;
+  background: none;
+  color: #c0c1c3;
 }
 /* line 135, ../sass/admin/dashboard.sass */
 .shortcut span {
