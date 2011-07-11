@@ -17,7 +17,7 @@ Radiant::Initializer.run do |config|
   # Only load the extensions named here, in the order given. By default all
   # extensions in vendor/extensions are loaded, in alphabetical order. :all
   # can be used as a placeholder for all extensions not explicitly named.
-  config.extensions = [ :layouts, :mailer_layouts, :dashboard, :taggable, :reader, :forum, :all ]
+  config.extensions = [ :dashboard, :taggable, :all ]
   
   # By default, only English translations are loaded. Remove any of these from
   # the list below if you'd like to provide any of the supported languages
@@ -87,8 +87,8 @@ Radiant::Initializer.run do |config|
   config.gem 'delocalize', :version => '~> 0.2.3'
   config.gem 'radiant-clipped-extension', :version => "~> 1.0.2"
 
-  config.gem 'radiant-layouts-extension', :version => '~> 1.1.3'
-  config.gem 'radiant-mailer_layouts-extension', :version => '~> 0.1.1', :lib => false
+  # config.gem 'radiant-layouts-extension', :version => '~> 1.1.3'
+  # config.gem 'radiant-mailer_layouts-extension', :version => '~> 0.1.1', :lib => false
   config.gem 'radiant-taggable-extension', :version => '2.0.0.rc2'
   # config.gem 'radiant-event_calendar-extension', :version => '2.0.0.rc2'
   # config.gem 'radiant-event_map-extension', :version => '~> 1.3.4'
