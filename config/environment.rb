@@ -86,15 +86,7 @@ Radiant::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.11'
   config.gem 'delocalize', :version => '~> 0.2.3'
   config.gem 'radiant-clipped-extension', :version => "~> 1.0.2"
-
-  # config.gem 'radiant-layouts-extension', :version => '~> 1.1.3'
-  # config.gem 'radiant-mailer_layouts-extension', :version => '~> 0.1.1', :lib => false
   config.gem 'radiant-taggable-extension', :version => '2.0.0.rc2'
-  # config.gem 'radiant-event_calendar-extension', :version => '2.0.0.rc2'
-  # config.gem 'radiant-event_map-extension', :version => '~> 1.3.4'
-  # config.gem 'radiant-taggable_events-extension', :version => '2.0.0.rc1'
-  # config.gem 'radiant-reader-extension', :version => "~> 2.0.0.rc5"
-  # config.gem 'radiant-forum-extension', :version => "~> 3.0.0.rc2"
   config.gem 'radiant-dashboard-extension', :version => '2.0.0.rc2'
   config.gem 'radiant-blog-extension', :version => '~> 1.1.0'
 
